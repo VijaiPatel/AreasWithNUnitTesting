@@ -36,7 +36,7 @@ namespace AreasWithNUnitTesting
             }
 
         }
-        public double RectanglePerimeter(double a, double b)// method for finding perimeter of a square
+        /*public double RectanglePerimeter(double a, double b)// method for finding perimeter of a square
         {
             double area = 0;
             area = 2*(a+b);
@@ -53,6 +53,6 @@ namespace AreasWithNUnitTesting
             double area = 0;
             area = a + b +c;
             return Math.Round(area, 2);
-        }
+        }*/
     }
 }

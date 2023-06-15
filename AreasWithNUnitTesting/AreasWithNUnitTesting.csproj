@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="AreaTestAndPerimeterTest.cs" />
     <Compile Include="FindArea.cs" />
+    <Compile Include="FindPerimeter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
