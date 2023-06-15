@@ -10,10 +10,15 @@ namespace AreasWithNUnitTesting
 {   [TestFixture]
     class AreaTestAndPerimeterTest
     {
+        private FindArea GetAreaCalc()
+        {
+            var calcarea = new FindArea();
+            return calcarea;
+        }
         [Test]
         public void RectangleTest()//test rectangle method
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 10.0;
             double y = 5;
             double expectedValue = 50;
@@ -24,7 +29,7 @@ namespace AreasWithNUnitTesting
         [Test]
         public void CircleTest()// test circle method
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 15.0;
             double expectedValue = 706.86;
             double actualValue = calcarea.Circle(x);
@@ -34,7 +39,7 @@ namespace AreasWithNUnitTesting
         [Test]
         public void PossibleTriangleTest()// test triangle method for a possible triangle
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 5.0;
             double y = 5.0;
             double z = 5.0;
@@ -46,7 +51,7 @@ namespace AreasWithNUnitTesting
         [Test]
         public void ImpossibleTriangleTest()// test triangle method for an impossible triangle
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 100.0;
             double y = 1.0;
             double z = 1.0;
@@ -58,7 +63,7 @@ namespace AreasWithNUnitTesting
         /*[Test]
         public void TesttoFail()//see if test fails as expected
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 10.0;
             double y = 5;
             double expectedValue = 500;
@@ -68,7 +73,7 @@ namespace AreasWithNUnitTesting
         [Test]
         public void RectanglePerimeterTest()// test rectangle perimeter method 
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 5.0;
             double y = 5.0;
             double expectedValue = 20;
@@ -78,7 +83,7 @@ namespace AreasWithNUnitTesting
         [Test]
         public void CirclePerimeterTest()// test circle perimeter method
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 15.0;
             double expectedValue = 94.25;
             double actualValue = calcarea.CirclePerimeter(x);
@@ -88,7 +93,7 @@ namespace AreasWithNUnitTesting
         [Test]
         public void TrianglePerimeterTest()// test triangle perimeter method
         {
-            FindArea calcarea = new FindArea();
+            FindArea calcarea = GetAreaCalc();
             double x = 5.0;
             double y = 5.0;
             double z = 5.0;
