@@ -10,24 +10,26 @@ namespace AreasWithNUnitTesting
 {   [TestFixture]
     class AreaTestAndPerimeterTest
     {
-        private FindArea GetAreaCalc()
+        private FindArea GetAreaCalc()//factory method for making a new calculator
         {
             var calcarea = new FindArea();
             return calcarea;
         }
         [Test]
-        public void RectangleTest()//test rectangle method
-        {
+        public void RectangleAreaTest()//test rectangle method
+        {   //arrange
             FindArea calcarea = GetAreaCalc();
             double x = 10.0;
             double y = 5;
             double expectedValue = 50;
+            //act
             double actualValue = calcarea.Rectangle(x, y);
+            //assert
             Assert.AreEqual(expectedValue, actualValue);
         }
 
         [Test]
-        public void CircleTest()// test circle method
+        public void CircleAreaTest()// test circle method
         {
             FindArea calcarea = GetAreaCalc();
             double x = 15.0;
@@ -37,7 +39,7 @@ namespace AreasWithNUnitTesting
         }
 
         [Test]
-        public void PossibleTriangleTest()// test triangle method for a possible triangle
+        public void PossibleTriangleAreaTest()// test triangle method for a possible triangle
         {
             FindArea calcarea = GetAreaCalc();
             double x = 5.0;
@@ -49,7 +51,7 @@ namespace AreasWithNUnitTesting
         }
 
         [Test]
-        public void ImpossibleTriangleTest()// test triangle method for an impossible triangle
+        public void ImpossibleTriangleAreaTest()// test triangle method for an impossible triangle
         {
             FindArea calcarea = GetAreaCalc();
             double x = 100.0;
